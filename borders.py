@@ -1,4 +1,8 @@
 ### EXTRACT DATA FROM ### http://opentopo.sdsc.edu/raster?opentopoID=OTSRTM.042013.4326.1 ###
+## git pull |  git add .  && git commit -m "someMessage" && git push origin master ##
+# use example: python borders.py splitImage sampleData.txt 2 2 out.png #
+# use example: python borders.py splitImageBorders sampleData.txt 2 2 out.png #
+# use example: python borders.py splitImagePoints sampleData.txt 2 2 out.png #
 
 
 import matplotlib.pyplot as plt ####
@@ -76,7 +80,7 @@ def getEdgesAsPointsStringList(edges , innerSeparator , outerSeparator ):
 		for t in x :
 
 			if (t > 0):
-				print("reading <"+str(t)+"> on ("+str(i)+","+str(j)+")")
+				#print("reading <"+str(t)+"> on ("+str(i)+","+str(j)+")")
 				new = str(i)+innerSeparator+str(j)
 				if firstWriteOccured :
 					res += outerSeparator + new
